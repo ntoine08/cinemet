@@ -1,0 +1,418 @@
+
+* {box-sizing: border-box}
+body 
+{
+    width: 100%;
+    font-family: Verdana, sans-serif; margin:0
+}
+
+
+/* CSS DE L'INDEX.HMTL*/
+
+/*CSS DE LA NAVBARRE*/
+
+.index
+{
+    list-style-type: none; /* pour retiré les points*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /*pour pas que le texte dépasse*/
+    background-color: black;
+}
+
+.index li
+{
+    float: left; /*pour que les éléments se mettent côte à côte*/
+
+}
+
+.index li a
+{
+    display: block;
+    color: white; /*couleur de la police*/
+    text-align: center; /*pour centrer le texte*/
+    padding: 14px 30px;
+    text-decoration: none; /*aucune décoration*/
+}
+
+.index li a:hover
+{
+    background-color: grey;
+}
+
+/*CSS DU PREMIER SLIDER*/
+
+.slide-a .carousel 
+{
+    background: #EEE;
+}
+  
+.slide-a .carousel-cell 
+{
+    width: 100%;
+    height: 600px;
+    margin-right: 10px;
+    background-image: url("images/Convoi-exceptionnel.jpg");
+    background-size: 100% auto;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+}
+  
+  /* cell number */
+.slide-a .carousel-cell:before 
+{
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+  
+/* css du 2eme slider*/
+
+.slide-d h1
+{
+    text-align: center;
+}
+
+.slide-d .carousel-cell
+{
+
+}
+
+
+/* CSS DU PARALAX*/
+
+.parallax
+{
+    background-image: url("images/salle-cinéma.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*css de la partie allocinemet*/
+
+.allo
+{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+ h2
+{
+    text-align: center;
+}
+
+.allo .salle
+{
+    float: left;
+    
+    margin: 10px 10px 10px 10px;
+    border: 1px solid black;
+    background-size: auto;
+    
+}
+
+
+.allo .salle-b
+{   
+    float: left;
+    width: 600px;
+    margin: 10px 10px 10px 30px;    
+}
+
+
+
+
+
+/*CSS DU FOOTER*/
+
+#footer
+{
+    background-color: gray;
+    height: 300px;
+}
+
+#footer ul
+{
+    list-style-type: none;
+    float: left;
+    width: 300px;
+}
+
+.footer-b
+{
+    margin-top: 0px;
+    height: 100px;
+    background-color: gray;
+}
+
+.footer-b ul
+{
+    list-style-type: none;
+    
+}
+
+.footer-b li
+{
+    float: right;
+    padding-right: 30px;
+}
+
+hr
+{
+    border-color: black;
+}
+
+/*//////////////////////CSS DE LA PAGE FILMS/////////////////////////*/
+
+/*CSS DE LA PARTIE FILMS*/
+
+/* css du premier bloc*/
+
+.films
+{
+    width: 100%;
+    height: 50%;
+    
+    
+}
+
+.films h1
+{
+    text-align: center;
+    font-size: 100px;
+}
+
+.partie-films-a
+{
+    float: left;
+    width: 29%;
+    background-color: azure;
+    height: 600px;
+    
+    
+}
+
+.partie-films-a button
+{
+    margin-left: 70px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.partie-films-a input
+{
+    height: 30px;
+    width: 200px;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+
+.dropbtn 
+{
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+  
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 70px;
+}
+  
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover
+{
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+  
+.dropdown:hover .dropbtn 
+{
+    background-color: grey;
+}
+
+/*CSS DU 2EME BLOC*/
+
+.partie-films-b
+{
+    margin-left: 29%;
+    height: 600px;
+    width: 70%;
+    background-color: yellowgreen;
+    padding: 15px;
+    text-align: center;
+      
+    
+}
+
+.partie-films-b h3
+{
+    text-align: center;
+}
+
+.partie-films-b img:hover
+{
+    border: 1px solid #777;
+}
+
+.partie-films-b img
+{
+
+    text-align: center;
+    
+    height: 250px;
+    width: 200px;
+    
+    
+}
+
+/*/////////////////////CSS DE LA PAGE FICHE FILM////////////////////////*/
+
+h4
+{
+    text-align: center;
+    font-size: 100px;
+    background-color: aquamarine;
+}
+
+.descriptif
+{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.descriptif img
+{
+    width: 70%;
+    text-align: center;
+    background-size: auto;
+}
+
+.descriptif p
+{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.descriptif ul
+{
+    list-style-type: none;
+}
+
+
+/*//////////////////CSS DE LA PAGE ACTEURS/////////////////////////////*/
+
+.nom-acteur h5
+{
+    text-align: center;
+    font-size: 100px;
+}
+
+.acteur 
+{
+    width: 100%;
+    height: 800px;
+    margin-bottom: 40px;
+}
+
+/*css du bloc liste*/
+.liste
+{
+    float: left;
+    width: 700px;
+    margin-left: 30px;
+    padding: 20px 40px 20px 20px;
+    
+}
+
+.liste h6
+{
+    font-size: 20px;
+}
+
+.identité
+{
+    border: 1px solid black;
+}
+
+.identité h6
+{
+    margin-left: 10px;
+}
+
+.identité p
+{
+    margin-left: 10px;
+}
+
+/*css de la photo*/
+.acteur .photo
+{
+    height: auto;
+    float: left;
+    margin-left: 40px;
+    padding: 20px 20px 20px 20px;
+    
+    background-size: auto;
+}
+
+/*css de la partie biographie*/
+
+.biographie
+{
+    width: 1300px;
+    height: auto;
+    margin: 20px 20px 20px 20px;
+}
+
+.biographie h6
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+.biographie p
+{
+    text-align: center;
+}
+
+
