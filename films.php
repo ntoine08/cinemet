@@ -16,11 +16,11 @@
 <body>
     <!--partie de la navbarre-->
     <ul class="index">
-        <li><a class="accueil" href="index.html">CINEMET</a></li>
-        <li><a href="films.html">FILMS</a></li>
-        <li><a href="fiche-films.html">FICHE FILMS</a></li>
-        <li><a href="réalisateurs.html">REALISATEURS</a></li>
-        <li><a href="acteurs.html">ACTEURS</a></li>
+        <li><a class="accueil" href="index.php">CINEMET</a></li>
+        <li><a href="films.php">FILMS</a></li>
+        <li><a href="fiche-films.php">FICHE FILMS</a></li>
+        <li><a href="réalisateurs.php">REALISATEURS</a></li>
+        <li><a href="acteurs.php">ACTEURS</a></li>
     </ul>
 
     <!--partie films-->
