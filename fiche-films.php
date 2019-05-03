@@ -20,7 +20,7 @@
     if(isset($_GET['id'])){
         try
         {
-         $bdd = new PDO('mysql:host=localhost; dbname=cinemet', 'sunjian', 'ichigo08');
+         $bdd = new PDO('mysql:host=localhost;dbname=cinemet', 'sunjian', 'ichigo08');
        }
        catch(Exception $e) 
        {
@@ -28,13 +28,13 @@
        }
      
        
-       $reponse = $bdd->query('SELECT * FROM films WHERE id='.$_GET['id']);
+       $reponse = $bdd->query('SELECT * FROM films,realisateur,acteur WHERE films.id='.$_GET["id"].' AND films.id_realisateur = realisateur.id AND acteur.id = films.id_acteur');
      
        while ($donnees = $reponse->fetch())
        {
-     
+
      ?>
-     
+
           
              <!--partie de la navbarre-->
              <ul class="index">
@@ -49,7 +49,7 @@
              
      
      
-             <h4><?php echo $donnees['nom']; ?></h4>
+             <h4><?php echo $donnees['nom_film']; ?></h4>
     
              <!--partie descriptif film-->
      
@@ -78,12 +78,12 @@
              
      
                  <ul>
-                     <li><?php echo $donnees['date_de_sortie'];?></li>
-                     <li>Durée :</li>
-                     <li>Réalisateur : </li>
-                     <li>Acteur : </li>
-                     <li>Genres : </li>
-                     <li>Nationalité :</li>
+                     <li>Date de sortie: <?php echo $donnees['date_de_sortie_film'];?></li>
+                     <li>Durée: <?php echo $donnees['duree_film'];?></li>
+                     <li>Réalisateur: <?php echo $donnees['nom_realisateur'];?></li>
+                     <li>Acteur: <?php echo $donnees['nom_acteur'];?></li>
+                     <li>Genres: </li>
+                     <li>Nationalité: </li>
                  </ul>
              </div>  
      

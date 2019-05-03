@@ -119,16 +119,13 @@
 
         <div class="partie-films-b">
             <h3>Nouveautés</h3>
-            <img src="affiches/affiche-avengers.jpg" width="20" height="20">
-            <img src="affiches/affiche-convoi.jpg">
-            <img src="affiches/affiche-dumbo.jpg">
-            <img src="affiches/affiche-liz.jpg">
+            <a href="fiche-films.php?id=2"><img src="affiches/affiche-avengers.jpg" width="20" height="20"></a>
+            <a href="fiche-films.php?id=7"><img src="affiches/affiche-convoi.jpg"></a>
+            <a href="fiche-films.php?id=3"><img src="affiches/affiche-dumbo.jpg"></a>
+            <a href="fiche-films.php?id=6"><img src="affiches/affiche-liz.jpg"></a>
             <a href="fiche-films.php?id=1"><img src="affiches/affiche-marvel.jpg"></a>
-            <img src="affiches/affiche-parc.jpg">
-            <img src="affiches/affiche-simetierre.jpg">
-
-
-
+            <a href="fiche-films.php?id=4"><img src="affiches/affiche-parc.jpg"></a>
+            <a href="fiche-films.php?id=5"><img src="affiches/affiche-simetierre.jpg"></a>
         </div>
     </div>
 
