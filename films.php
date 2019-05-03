@@ -119,7 +119,7 @@
 
         <div class="partie-films-b">
             <h3>Nouveautés</h3>
-            <a href="fiche-films.php?id=2"><img src="affiches/affiche-avengers.jpg" width="20" height="20"></a>
+            <a href="fiche-films.php?id=2"><img src="affiches/affiche-avengers.jpg" width="20" height="20"></a> <!--href avec le php pour relier l'image à la base de donnée quand je clique dessus et afficher le bon film quand je clique dessus-->
             <a href="fiche-films.php?id=7"><img src="affiches/affiche-convoi.jpg"></a>
             <a href="fiche-films.php?id=3"><img src="affiches/affiche-dumbo.jpg"></a>
             <a href="fiche-films.php?id=6"><img src="affiches/affiche-liz.jpg"></a>

@@ -18,13 +18,13 @@
 <!-- connection BDD -->
 <?php 
 
-if(isset($_GET['id']))
+if(isset($_GET['id'])) // pour vérifier que j'ai bien une valeur
 {
-include("connection.php");
-include("requête.php");
+include("connection.php"); // inclure la connection
+include("requête.php");     // inclure la requête
 
        
-    while ($donnees = $reponse->fetch())
+    while ($donnees = $reponse->fetch()) //boucle while pour afficher les données
     {
 
 ?>
@@ -42,7 +42,7 @@ include("requête.php");
              
      
      
-             <h4><?php echo $donnees['nom_film']; ?></h4>
+             <h4><?php echo $donnees['nom_film']; ?></h4> <!-- echo pour afficher le nom du film-->
     
              <!--partie descriptif film-->
      
@@ -135,11 +135,11 @@ include("requête.php");
 
     <?php
     }
-    $reponse->closeCursor();
+    $reponse->closeCursor(); // pour fermer une fois qu'on aafficher tout ce qu'on voulais de la base de donnée
 }
     else 
     {
-        echo 'pas de post';
+        echo 'pas de post'; // message si il ne détecte pas les données
     }
     ?>
   

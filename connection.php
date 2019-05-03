@@ -8,5 +8,5 @@
         {
          die('Erreur '.$e->getMessage());
         }
-    
+    // générique pour pouvoir me connecter à la bdd
 ?>
