@@ -14,24 +14,17 @@
 
     <body>
 
-<!-- connection BDD -->
-<?php
 
-    if(isset($_GET['id']))
-    {
-        try
-        {
-         $bdd = new PDO('mysql:host=localhost;dbname=cinemet', 'sunjian', 'ichigo08');
-        }
-        catch(Exception $e) 
-        {
-         die('Erreur '.$e->getMessage());
-        }
-     
+<!-- connection BDD -->
+<?php 
+
+if(isset($_GET['id']))
+{
+include("connection.php");
+include("requête.php");
+
        
-        $reponse = $bdd->query('SELECT * FROM films,realisateur,acteur WHERE films.id='.$_GET["id"].' AND films.id_realisateur = realisateur.id AND acteur.id = films.id_acteur');
-     
-        while ($donnees = $reponse->fetch())
+    while ($donnees = $reponse->fetch())
     {
 
 ?>
@@ -136,12 +129,14 @@
              </div>
 
     <?php
-    }
-        $reponse->closeCursor();
+    
+       
     ?>
 
     <?php
-    } 
+    }
+    $reponse->closeCursor();
+}
     else 
     {
         echo 'pas de post';
