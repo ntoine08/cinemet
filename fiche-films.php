@@ -17,25 +17,25 @@
 <!-- connection BDD -->
 <?php
 
-    if(isset($_GET['id'])){
+    if(isset($_GET['id']))
+    {
         try
         {
          $bdd = new PDO('mysql:host=localhost;dbname=cinemet', 'sunjian', 'ichigo08');
-       }
-       catch(Exception $e) 
-       {
+        }
+        catch(Exception $e) 
+        {
          die('Erreur '.$e->getMessage());
-       }
+        }
      
        
-       $reponse = $bdd->query('SELECT * FROM films,realisateur,acteur WHERE films.id='.$_GET["id"].' AND films.id_realisateur = realisateur.id AND acteur.id = films.id_acteur');
+        $reponse = $bdd->query('SELECT * FROM films,realisateur,acteur WHERE films.id='.$_GET["id"].' AND films.id_realisateur = realisateur.id AND acteur.id = films.id_acteur');
      
-       while ($donnees = $reponse->fetch())
-       {
+        while ($donnees = $reponse->fetch())
+    {
 
-     ?>
-
-          
+?>
+      
              <!--partie de la navbarre-->
              <ul class="index">
                  <li><a class="accueil" href="index.php">CINEMET</a></li>
@@ -135,15 +135,17 @@
      
              </div>
 
-             <?php
-     }
-     $reponse->closeCursor();
-     ?>
-<?php
+    <?php
+    }
+        $reponse->closeCursor();
+    ?>
+
+    <?php
     } 
-    else {
+    else 
+    {
         echo 'pas de post';
     }
-?>
+    ?>
   
     </body>
