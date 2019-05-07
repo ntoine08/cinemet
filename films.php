@@ -31,13 +31,41 @@
             <input type="search" id="site-search">
             <button>Rechercher</button>
 
+            <!--pour le menu acteurs-->
+            <div class="dropdown">
+                <button class="dropbtn">Acteurs</button>
+                <div class="dropdown-content">
+                    <a href="acteurs.php?ID_acteur=1">Brie Larson</a>
+                    <a href="acteurs.php?ID_acteur=2">Robert Downey jr</a>
+                    <a href="acteurs.php?ID_acteur=3">Eva Green</a>
+                    <a href="acteurs.php?ID_acteur=4">Marc Lavoine</a>
+                    <a href="acteurs.php?ID_acteur=5">Jason Clark</a>
+                    <a href="acteurs.php?ID_acteur=6">Atsumi Tanezaki</a>
+                    <a href="acteurs.php?ID_acteur=7">Christian Clavier</a>
+                </div>
+            </div>
+
+            <!--pour le menu RÉALISATEUR-->
+            <div class="dropdown">
+                <button class="dropbtn">Réalisateurs</button>
+                <div class="dropdown-content">
+                    <a href="réalisateurs.php?ID_realisateur=1">Anna Boden</a>
+                    <a href="réalisateurs.php?ID_realisateur=2">Joe Russo</a>
+                    <a href="réalisateurs.php?ID_realisateur=3">Tim Burton</a>
+                    <a href="réalisateurs.php?ID_realisateur=4">David Feiss</a>
+                    <a href="réalisateurs.php?ID_realisateur=5">Kévin Kolsch</a>
+                    <a href="réalisateurs.php?ID_realisateur=6">Naoko Yamada</a>
+                    <a href="réalisateurs.php?ID_realisateur=7">Bertrand Blier</a>
+                </div>
+            </div>
+
             <!--pour le menu action-->
             <div class="dropdown">
                 <button class="dropbtn">Action</button>
                 <div class="dropdown-content">
                     <a href="#">Top 2019</a>
                     <a href="#">Meilleurs films</a>
-                    <a href="#">BoSx office</a>
+                    <a href="#">Box office</a>
                     <a href="#">Tous les films</a>
                 </div>
             </div>
@@ -119,13 +147,13 @@
 
         <div class="partie-films-b">
             <h3>Nouveautés</h3>
-            <a href="fiche-films.php?id=2"><img src="affiches/affiche-avengers.jpg" width="20" height="20"></a> <!--href avec le php pour relier l'image à la base de donnée quand je clique dessus et afficher le bon film quand je clique dessus-->
-            <a href="fiche-films.php?id=7"><img src="affiches/affiche-convoi.jpg"></a>
-            <a href="fiche-films.php?id=3"><img src="affiches/affiche-dumbo.jpg"></a>
-            <a href="fiche-films.php?id=6"><img src="affiches/affiche-liz.jpg"></a>
-            <a href="fiche-films.php?id=1"><img src="affiches/affiche-marvel.jpg"></a>
-            <a href="fiche-films.php?id=4"><img src="affiches/affiche-parc.jpg"></a>
-            <a href="fiche-films.php?id=5"><img src="affiches/affiche-simetierre.jpg"></a>
+            <a href="fiche-films.php?ID_film=2"><img src="affiches/affiche-avengers.jpg" width="20" height="20"></a> <!--href avec le php pour relier l'image à la base de donnée quand je clique dessus et afficher le bon film quand je clique dessus-->
+            <a href="fiche-films.php?ID_film=7"><img src="affiches/affiche-convoi.jpg"></a>
+            <a href="fiche-films.php?ID_film=3"><img src="affiches/affiche-dumbo.jpg"></a>
+            <a href="fiche-films.php?ID_film=6"><img src="affiches/affiche-liz.jpg"></a>
+            <a href="fiche-films.php?ID_film=1"><img src="affiches/affiche-marvel.jpg"></a>
+            <a href="fiche-films.php?ID_film=4"><img src="affiches/affiche-parc.jpg"></a>
+            <a href="fiche-films.php?ID_film=5"><img src="affiches/affiche-simetierre.jpg"></a>
         </div>
     </div>
 

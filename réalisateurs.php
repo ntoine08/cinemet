@@ -24,8 +24,23 @@
 
         <!--PARTIE DESCRIPTIF DE L'ACTEUR-->
 
+        <?php 
+
+           
+
+            if(isset($_GET['ID_realisateur'])) // pour vérifier que j'ai bien une valeur
+            {
+                include("connection.php"); // inclure la connection
+                include("requête.php");     // inclure la requête
+
+       
+             while ($donnees = $reponse->fetch()) //boucle while pour afficher les données
+            {
+
+            ?>
+
         <div class="nom-acteur">
-            <h5>Nom du réalisateur</h5>
+            <h5><?php echo $donnees['nom_realisateur'];?></h5>
         </div>
 
         <div class="acteur">
@@ -33,15 +48,15 @@
             <div class="liste">
                 <div class="identité">
                     <h6>Date de naissance</h6>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <p><?php echo $donnees['date_de_naissance_realisateur'];?></p>
                 </div>
                 <div class="identité">
                     <h6>Lieu de naissance</h6>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <p><?php echo $donnees['lieu_de_naissance_realisateur'];?></p>
                 </div>
                 <div class="identité">
                     <h6>Nationalité</h6>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <p><?php echo $donnees['nationalites_realisateur'];?></p>
                 </div>
                 <div class="identité">
                     <h6>Filmographie</h6>
@@ -56,17 +71,7 @@
 
         <div class="biographie">
             <h6>Biographie</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sd do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><?php echo $donnees['biographie_realisateur'];?></p>
         </div>
 
         <!--partie footer-->
@@ -117,5 +122,19 @@
                 </ul>
     
         </div>
+
+    <?php
+    }
+    $reponse->closeCursor(); // pour fermer une fois qu'on aafficher tout ce qu'on voulais de la base de donnée
+    }
+    else 
+    {
+        while ($donnees = $realisateur->fetch()) //boucle while pour afficher les données
+        { 
+            header('Location: réalisateurs.php?ID_realisateur=1');
+            exit();
+        }
+    }
+    ?>
     </body>
 </html>
