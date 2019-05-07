@@ -129,7 +129,7 @@
     }
     else 
     {
-        while ($donnees = $realisateur->fetch()) //boucle while pour afficher les données
+        while ($donnees = $standard->fetch()) //boucle while pour afficher les données
         { 
             header('Location: réalisateurs.php?ID_realisateur=1');
             exit();
