@@ -3,5 +3,5 @@ $reponse = $bdd->query('SELECT * FROM films,realisateur,acteur,genre WHERE films
 
 $standard = $bdd->query('SELECT * FROM `films` ORDER BY `ID_film` ASC');
 
-$realisateur = $bdd->query('SELECT * FROM `realisateur` WHERE `ID_realisateur`AND`nom_realisateur`AND`nationalite_realisateur`AND`date_de_naissance_realisateur`AND`age_realisateur`AND`lieu_de_naissance_realisateur`AND`biographie_realisateur`AND`img_realisateur`');
+$realisateur = $bdd->query('SELECT * FROM `realisateur` WHERE `ID_realisateur`AND`nom_realisateur`AND`nationalite_realisateur`AND`date_de_naissance_realisateur`AND`age_realisateur`AND`lieu_de_naissance_realisateur`AND`biographie_realisateur`AND`img_realisateur` LIMIT 1');
 ?> <!-- variable crée pour la requête SQL pour pouvoir afficher les données -->
