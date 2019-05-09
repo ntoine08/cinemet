@@ -206,3 +206,25 @@ ALTER TABLE `films`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+
+
+
+
+
+<?php
+    }
+    $reponse->closeCursor(); // pour fermer une fois qu'on aafficher tout ce qu'on voulais de la base de donnée
+    }
+    else 
+    {
+        while ($donnee = $realisateur->fetch()) //boucle while pour afficher les données
+        { 
+            header('Location: réalisateurs.php?ID_realisateur=1');
+            exit();
+        }
+    }
+    ?>

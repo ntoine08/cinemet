@@ -15,21 +15,6 @@
 
 <body>
 
-
-    <!-- connection BDD -->
-    <?php 
-
-
-if(isset($_GET['ID_film'])) // pour vérifier que j'ai bien une valeur
-{
-    
-    include("connection.php"); // inclure la connection
-    include("requête.php");     // inclure la requête
-    while ($donnees = $reponse->fetch()) //boucle while pour afficher les données
-    {
-        
-?>
-
     <!--partie de la navbarre-->
     <ul class="index">
         <li><a class="accueil" href="index.php">CINEMET</a></li>
@@ -39,9 +24,18 @@ if(isset($_GET['ID_film'])) // pour vérifier que j'ai bien une valeur
         <li><a href="acteurs.php">ACTEURS</a></li>
     </ul>
 
+    <!-- connection BDD -->
+    <?php 
+
+if(isset($_GET['ID_film'])); // pour vérifier que j'ai bien une valeur
+{   
+    include("connection.php"); // inclure la connection
+    include("requête.php");     // inclure la requête
+    while ($donnees = $reponse->fetch()) //boucle while pour afficher les données
+    {       
+?>
+
     <!--partie titre film-->
-
-
 
     <h4><?php echo $donnees['nom_film']; ?></h4> <!-- echo pour afficher le nom du film-->
 
@@ -50,7 +44,6 @@ if(isset($_GET['ID_film'])) // pour vérifier que j'ai bien une valeur
     <div class="descriptif">
         <img src="<?php echo $donnees['img_film']; ?>">
         <p><?php echo $donnees['synopsis_film'];?></p>
-
 
         <ul>
             <li>Date de sortie: <?php echo $donnees['date_de_sortie_film'];?></li>
@@ -112,15 +105,9 @@ if(isset($_GET['ID_film'])) // pour vérifier que j'ai bien une valeur
     </div>
 
     <?php
-    
-       
-    ?>
-
-    <?php
     }
-    $reponse->closeCursor(); // pour fermer une fois qu'on aafficher tout ce qu'on voulais de la base de donnée
+    $reponse->closeCursor(); // pour fermer une fois qu'on a afficher tout ce qu'on voulais de la base de donnée
 }
 
     ?>
-
 </body>
