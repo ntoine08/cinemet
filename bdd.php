@@ -228,3 +228,36 @@ ALTER TABLE `films`
         }
     }
     ?>
+
+<?php
+
+class Database
+{
+    private static $dbHost = "mysql:host=localhost";
+    private static $dbName = "cinemets";
+    private static $dbUser = "sunjian";
+    private static $dbUserPassword = "ichigo08";
+
+    private static $connection = null;
+
+    public static function connect()
+    {
+        try //pour se connecter à la bdd
+        {
+            self::$connection = new PDO(self::$dbHost . "dbname=" . self::$dbName,self::$dbUser,self::$dbUserPassword);
+        }
+        catch(PDOException $e) // en cas d'erreur
+        {
+            die($e->getMessage()); // afficher message d'erreur ?
+        }
+        return self::$connection;
+    }
+     
+    function disconnect() // se déconnecter ?
+    {
+        self::$connection = null;
+    }
+}
+
+Database::connect();
+?> 

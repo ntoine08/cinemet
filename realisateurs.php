@@ -23,20 +23,16 @@
 
     <!--PARTIE DESCRIPTIF DE L'ACTEUR-->
 
-
-
     <?php 
 
         include("connection.php"); // inclure la connection
-        $realisateur = $bdd->query("SELECT * FROM `realisateur` WHERE realisateur.ID_realisateur = '.$_GET["ID_realisateur"].'");
+        $realisateur = $bdd->query('SELECT * FROM `realisateur` WHERE ID_realisateur = '.$_GET["ID_realisateur"].'');
         //$realisateur = $bdd->query("SELECT * FROM `realisateur` WHERE ID_realisateur = 3");
 
         if(isset($_GET['ID_realisateur']));// pour vérifier que j'ai bien une valeur
         { 
             while ($donnes = $realisateur->fetch())
-            {
-
-                
+            {               
 
     ?>
 
@@ -49,15 +45,15 @@
         <div class="liste">
             <div class="identité">
                 <h6>Date de naissance</h6>
-                <p></p>
+                <p><?php echo $donnes['date_de_naissance_realisateur']; ?></p>
             </div>
             <div class="identité">
                 <h6>Lieu de naissance</h6>
-                <p></p>
+                <p><?php echo $donnes['lieu_de_naissance_realisateur']; ?></p>
             </div>
             <div class="identité">
                 <h6>Nationalité</h6>
-                <p></p>
+                <p><?php echo $donnes['nationalite_realisateur']; ?></p>
             </div>
             <div class="identité">
                 <h6>Filmographie</h6>
@@ -66,13 +62,13 @@
         </div>
 
         <div class="photo">
-            <img src="réalisateurs/joe-russo.jpg" height="500">
+            <img src="<?php echo $donnes['img_realisateur']; ?>" height="500">
         </div>
     </div>
 
     <div class="biographie">
         <h6>Biographie</h6>
-        <p></p>
+        <p><?php echo $donnes['biographie_realisateur']; ?></p>
     </div>
 
     <!--partie footer-->
