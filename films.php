@@ -18,9 +18,6 @@
     <ul class="index">
         <li><a class="accueil" href="index.php">CINEMET</a></li>
         <li><a href="films.php">FILMS</a></li>
-        <li><a href="fiche-films.php">FICHE FILMS</a></li>
-        <li><a href="réalisateurs.php">REALISATEURS</a></li>
-        <li><a href="acteurs.php">ACTEURS</a></li>
     </ul>
 
     <!--partie films-->
@@ -49,13 +46,13 @@
             <div class="dropdown">
                 <button class="dropbtn">Réalisateurs</button>
                 <div class="dropdown-content">
-                    <a href="réalisateurs.php?ID_realisateur=1">Anna Boden</a>
-                    <a href="réalisateurs.php?ID_realisateur=2">Joe Russo</a>
-                    <a href="réalisateurs.php?ID_realisateur=3">Tim Burton</a>
-                    <a href="réalisateurs.php?ID_realisateur=4">David Feiss</a>
-                    <a href="réalisateurs.php?ID_realisateur=5">Kévin Kolsch</a>
-                    <a href="réalisateurs.php?ID_realisateur=6">Naoko Yamada</a>
-                    <a href="réalisateurs.php?ID_realisateur=7">Bertrand Blier</a>
+                    <a href="realisateurs.php?ID_realisateur=1">Anna Boden</a>
+                    <a href="realisateurs.php?ID_realisateur=2">Joe Russo</a>
+                    <a href="realisateurs.php?ID_realisateur=3">Tim Burton</a>
+                    <a href="realisateurs.php?ID_realisateur=4">David Feiss</a>
+                    <a href="realisateurs.php?ID_realisateur=5">Kévin Kolsch</a>
+                    <a href="realisateurs.php?ID_realisateur=6">Naoko Yamada</a>
+                    <a href="realisateurs.php?ID_realisateur=7">Bertrand Blier</a>
                 </div>
             </div>
 

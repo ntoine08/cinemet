@@ -18,9 +18,7 @@
     <ul class="index">
         <li><a class="accueil" href="index.php">CINEMET</a></li>
         <li><a href="films.php">FILMS</a></li>
-        <li><a href="fiche-films.php">FICHE FILMS</a></li>
-        <li><a href="réalisateurs.php">REALISATEURS</a></li>
-        <li><a href="acteurs.php">ACTEURS</a></li>
+        
     </ul>
 
     <!--PARTIE DESCRIPTIF DE L'ACTEUR-->
@@ -30,7 +28,9 @@
     <?php 
 
         include("connection.php"); // inclure la connection
-        $realisateur = $bdd->query('SELECT * FROM `realisateur` LIMIT 1');
+        $realisateur = $bdd->query("SELECT * FROM `realisateur` WHERE realisateur.ID_realisateur = '.$_GET["ID_realisateur"].'");
+        //$realisateur = $bdd->query("SELECT * FROM `realisateur` WHERE ID_realisateur = 3");
+
         if(isset($_GET['ID_realisateur']));// pour vérifier que j'ai bien une valeur
         { 
             while ($donnes = $realisateur->fetch())

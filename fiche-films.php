@@ -19,9 +19,6 @@
     <ul class="index">
         <li><a class="accueil" href="index.php">CINEMET</a></li>
         <li><a href="films.php">FILMS</a></li>
-        <li><a href="fiche-films.php">FICHE FILMS</a></li>
-        <li><a href="réalisateurs.php">REALISATEURS</a></li>
-        <li><a href="acteurs.php">ACTEURS</a></li>
     </ul>
 
     <!-- connection BDD -->
@@ -30,7 +27,7 @@
 if(isset($_GET['ID_film'])); // pour vérifier que j'ai bien une valeur
 {   
     include("connection.php"); // inclure la connection
-    include("requête.php");     // inclure la requête
+    include("requete.php");     // inclure la requête
     while ($donnees = $reponse->fetch()) //boucle while pour afficher les données
     {       
 ?>

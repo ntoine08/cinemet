@@ -17,9 +17,6 @@
         <ul class="index">
             <li><a class="accueil" href="index.php">CINEMET</a></li>
             <li><a href="films.php">FILMS</a></li>
-            <li><a href="fiche-films.php">FICHE FILMS</a></li>
-            <li><a href="réalisateurs.php">REALISATEURS</a></li>
-            <li><a href="acteurs.php">ACTEURS</a></li>
         </ul>
 
         <!--PARTIE DESCRIPTIF DE L'ACTEUR-->
