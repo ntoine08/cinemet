@@ -1,5 +1,5 @@
 <?php
-    include("connection.php"); // inclure la connection
+    $cnx = mysql_connect("localhost", "sunjian", "ichigo08"); // inclure la connection
 
     //SÉLECTION DE LA BASE DE DONNÉES
     $db = mysql_select_db("cinemets");
@@ -16,7 +16,7 @@
     $sql = "INSERT INTO films (nom_film, date_de_sortie_film, duree_film, img_film, nationalite_film, synopsis_film) VALUES ('$nom_film', '$date_de_sortie_film', '$duree_film', '$img_film', '$nationalite_film', '$synopsis_film')";
 
     //execution de la requête
-    $requete = mysql_query($sql, $bdd) or die(mysql_error());
+    $requete = mysql_query($sql, $cnx) or die(mysql_error());
 
     //affichage des résultats, pour savoir si ça a marché
     if($requete)
