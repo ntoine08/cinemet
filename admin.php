@@ -15,33 +15,19 @@
 
 <body>
 
-<?php
 
-
-include("connection.php"); // inclure la connection
-
-?>
     <div>
         <form name="insertion" action="insertion.php" method="POST"> <!--formulaire pour la partie films -->
-            nom_film : <input name="nom_film" type="text"><br>
-            date_de_sortie_film : <input name="date_de_sortie_film" type="text"><br>
-            duree_film : <input name="duree_film" type="text"><br>
-            img_film : <input name="img_film" type="text"><br>
-            nationalite_film : <input name="nationalite_film" type="text"><br>
-            synopsis_film : <input name="synopsis_film" type="text"><br><br>
+            nom_film : <input name="nom_film" type="text" id="nom_film"><br>
+            date_de_sortie_film : <input name="date_de_sortie_film" id="date_de_sortie_film" type="text"><br>
+            duree_film : <input name="duree_film" type="text" id="duree_film"><br>
+            img_film : <input name="img_film" type="text" id="img_film"><br>
+            nationalite_film : <input name="nationalite_film" type="text" id="nationalite_film"><br>
+            synopsis_film : <input name="synopsis_film" type="text" id="synopsis_film"><br><br>
 
             <input type="submit" name="envoyer" value="envoyer"> <!--bouton pour envoyer-->
         </form>
     </div>
-
-   <?php
-    
-        
-    ?>
-
-
-
-
 
 
 </body>
