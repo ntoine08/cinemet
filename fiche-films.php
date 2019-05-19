@@ -19,6 +19,7 @@
     <ul class="index">
         <li><a class="accueil" href="index.php">CINEMET</a></li>
         <li><a href="films.php">FILMS</a></li>
+        <li><a class="conn" href="user.php">CONNEXION</a></li>
     </ul>
 
     <!-- connection BDD -->
@@ -55,49 +56,28 @@ if(isset($_GET['ID_film'])); // pour vérifier que j'ai bien une valeur
     <!--partie footer-->
 
     <footer id="footer">
-        <ul>
-            <li>AllocineMET</li>
-            <br>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-        </ul>
+         
+         <ul class="premierul"> <!-- première liste pour le copyright-->
+         <li>© 2019 Copyright: AllocineMET</li>
+         </ul>
 
-        <ul>
-            <li>Films à l'affiche</li><br>
-            <li>Film 1</li><br>
-            <li>Film 2</li><br>
-            <li>Film 3</li><br>
-            <li>Film 4</li>
-        </ul>
+         <ul class="deuxiemeul"> <!-- 2eme liste pour les coordonnées-->
+             <li>Contact</li><br>
+             <li>AllocineMET</li><br>
+             <li>12, rue des cacahuètes</li><br>
+             <li>www.AllocineMET.net</li><br>
+             <li>TEL +33 6 52 50 05 35</li><br>
+             <li>TEL +33 6 87 26 69 70</li>
+         </ul>
 
-        <ul>
-            <li>Lien utiles</li><br>
-            <li>Lorem Ipsum</li><br>
-            <li>Lorem Ipsum</li><br>
-            <li>Lorem Ipsum</li><br>
-            <li>Lorem Ipsum</li>
-        </ul>
+        
+         <ul class="troisiemeul"> <!-- 3eme liste pour les logos-->
+             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a>&nbsp<a href="https://twitter.com/"><img src="images/twitter.png"></a></li>
+             <li><a href="https://fr.linkedin.com/"><img src="images/linkedin.png"></a>&nbsp<a href="https://github.com/"><img src="images/github.png"></a></li>
+             
+         </ul>
+     </footer>
 
-        <ul>
-            <li>Contact</li><br>
-            <li>AllocineMET</li><br>
-            <li>www.AllocineMET.net</li><br>
-            <li>TEL +33 6 52 50 05 35</li><br>
-            <li>TEL +33 6 87 26 69 70</li>
-        </ul>
-
-    </footer>
-    <div class="footer-b">
-        <hr>
-
-        <p>© 2019 Copyright: AllocineMET</p>
-        <ul>
-            <li><img src="images/facebook.png"></li>
-            <li><img src="images/linkedin.png"></li>
-            <li><img src="images/twitter.png"></li>
-            <li><img src="images/github.png"></li>
-        </ul>
 
     </div>
 
