@@ -29,7 +29,7 @@ body
 
 .index .conn
 {
-    margin-left: 1000px;
+    margin-left: 800px;
 }
 
 .index li a
@@ -145,7 +145,7 @@ body { font-family: sans-serif; }
 .allo .salle-b
 {   
     float: left;
-    width: 700px;
+    width: 600px;
     margin: 10px 10px 10px 0px;
     padding: 8px;
     border: 5px solid #09129C;
@@ -182,7 +182,7 @@ body { font-family: sans-serif; }
 
 #footer .deuxiemeul /*pour la deuxième liste*/
 {
-    margin-right: 300px;
+    margin-right: 200px;
 }
 
 #footer .troisiemeul /*pour la troisième liste*/

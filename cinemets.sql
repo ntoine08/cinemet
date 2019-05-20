@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Lun 13 Mai 2019 à 09:07
+-- Généré le :  Lun 20 Mai 2019 à 09:02
 -- Version du serveur :  5.7.25-0ubuntu0.18.04.2
 -- Version de PHP :  7.2.15-0ubuntu0.18.04.1
 
@@ -64,9 +64,9 @@ CREATE TABLE `films` (
   `img_film` varchar(100) NOT NULL,
   `nationalite_film` varchar(100) NOT NULL,
   `synopsis_film` text NOT NULL,
-  `ID_genre` int(11) NOT NULL,
-  `ID_acteur` int(11) NOT NULL,
-  `ID_realisateur` int(11) NOT NULL
+  `ID_genre` int(11) DEFAULT NULL,
+  `ID_acteur` int(11) DEFAULT NULL,
+  `ID_realisateur` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -80,7 +80,8 @@ INSERT INTO `films` (`ID_film`, `nom_film`, `date_de_sortie_film`, `duree_film`,
 (4, 'Le parc des merveilles', '2019-04-03', '01h 26min', 'images/le-parc-des-merveilles.jpg', 'Américain, Espagnol', 'Le Parc des Merveilles raconte l’histoire d’un parc d’attractions fabuleux né de l’imagination extraordinaire d’une petite fille appelée June.\r\nUn jour, le Parc prend vie...', 3, 4, 4),
 (5, 'Simetierre', '2019-04-10', '01h 41min', 'images/simetierre.jpg', 'Américain', 'Le docteur Louis Creed, sa femme Rachel et leurs deux jeunes enfants quittent Boston pour s\'installer dans une région rurale du Maine. Près de sa maison, le docteur découvre un mystérieux cimetière caché au fond des bois. Peu après, une tragédie s’abat sur lui. Creed sollicite alors l\'aide d\'un étrange voisin, Jud Crandall. Sans le savoir, il vient de déclencher une série d’événements tragiques qui vont donner naissance à de redoutables forces maléfiques.', 4, 5, 5),
 (6, 'Liz et l\'oiseau bleu', '2019-04-17', '01h 30min', 'images/liz-et-l\'oiseau-bleu.jpg', 'Japonais', 'Nozomi est une jeune femme extravertie et très populaire auprès de ses camarades de classe, doublée d\'une talentueuse flûtiste. Mizore, plus discrète et timide, joue du hautbois. Mizore se sent très proche et dépendante de Nozomi, qu\'elle affectionne et admire. Elle craint que la fin de leur dernière année de lycée soit aussi la fin de leur histoire, entre rivalité musicale et admiration.Les deux amies se préparent à jouer en duo pour la compétition musicale du lycée Kita Uji. ', 5, 6, 6),
-(7, 'Convoi exceptionnel', '2019-03-13', '01h 22min', 'images/Convoi-exceptionnel.jpg', 'Français,belge', 'C’est l’histoire d’un type qui va trop vite et d’un gros qui est trop lent. Foster rencontre Taupin. Le premier est en pardessus, le deuxième en guenilles. Tout cela serait banal si l’un des deux n’était en possession d’un scénario effrayant, le scénario de leur vie et de leur mort. Il suffit d’ouvrir les pages et de trembler…', 6, 7, 7);
+(7, 'Convoi exceptionnel', '2019-03-13', '01h 22min', 'images/Convoi-exceptionnel.jpg', 'Français,belge', 'C’est l’histoire d’un type qui va trop vite et d’un gros qui est trop lent. Foster rencontre Taupin. Le premier est en pardessus, le deuxième en guenilles. Tout cela serait banal si l’un des deux n’était en possession d’un scénario effrayant, le scénario de leur vie et de leur mort. Il suffit d’ouvrir les pages et de trembler…', 6, 7, 7),
+(8, 'tortue ninja', '2019-04-03', '	 01h 26min', 'images/tortue-ninja.jpg', 'américain', 'fffff', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -136,6 +137,25 @@ INSERT INTO `realisateur` (`ID_realisateur`, `nom_realisateur`, `nationalite_rea
 (6, 'Naoko Yamada', 'Japonaise', '1984-11-28', 'Préfecture de Gunma (Japon)', '34 ans', 'Naoko Yamada avait l’intention de travailler dans le cinéma après l’université, mais elle décide de rejoindre le studio Kyoto Animation après avoir vu une de leurs publicités2. Son premier travail est sur la série Inuyasha, où elle dessine les images de tweening, avant d\'être promue animateur clé sur Air2.\r\n\r\nAprès avoir dirigé un épisode de Clannad, elle fait ses débuts en tant que réalisatrice de série sur K-ON!, l\'adaptation d\'un manga tranche de vie sur la vie de cinq lycéennes montant un club de musique légère au sein de leur lycée2. La série est un succès, amenant le studio à produire une seconde saison et un film. En 2013, elle réalise Tamako Market et son film dérivé Tamako Love Story en 2014 pour lequel elle est récompensée aux Japan Media Arts Festival où elle obtient le New Face Award3. Film pour lequel elle produit l\'intégralité du storyboard et écrit les musiques du générique du début du film4,5.\r\n\r\nEn 2016, son projet suivant est Silent Voice, adaptation du manga du même nom traitant de l\'ijime, l\'harcèlement scolaire au Japon. Pour sa première semaine d\'exploitation au cinéma au Japon, le film se classe deuxième au box office japonais derrière Your Name. (le plus gros succès cinéma de l\'année au Japon) et engendre 2,3 millions de yens de recettes6. Le film est nommé pour de nombreuses récompenses comme pour le meilleur film d\'animation au Mainichi Film Awards et le film d\'animation de l\'année au Japan Academy Prize.\r\n\r\nEn 2018, elle réalise, toujours au cinéma, Liz to aoi tori basé sur l\'univers de la série télévisée Sound! Euphonium sur laquelle elle avait auparavant assuré la supervision en tant que directeur de production, une partie du storyboard et réalisé le premier épisode ainsi que son épisode final. Elle obtient pour ce film le prix Noburo Ofuji lors des 73th Mainichi Film Awards.\r\n\r\nTrès prolifique, depuis son entrée au studio Kyoto Animation, elle est créditée sur la quasi-totalité des séries et des films produits par le studio dans un ou plusieurs des différents domaines qu\'elle maîtrise, que ce soit au storyboard, à l\'animation ou à la réalisation d\'épisodes.\r\n\r\nPour cette dernière, le rôle le plus important d\'être un réalisateur est d\'observer les gens. Elle se décrit elle-même comme une réalisatrice de « méthode », mettant l\'accent sur l\'esprit des personnages.', 'réalisateurs/naoko-yamada.jpg'),
 (7, 'Bertrand Blier', 'Français', '1939-03-14', '80 ans', 'Paris - France', 'Après avoir débuté comme assistant réalisateur en 1959 sur Oh! que mambo de John Berry et s\'être fait remarqué pour ses docu-fiction Hitler... connais pas ! en 1963, Bertrand Blier dirige son père, le légendaire Bernard Blier, dans son premier long métrage de fiction, Si j\'étais un espion (1967). \r\n\r\nIl faut cependant attendre 1974 pour que Blier réalisateur se fasse un nom avec le triomphe public des Valseuses et de son trio vedette Gérard Depardieu, Patrick Dewaere et Miou-Miou. La patte Blier s\'instaure : humour acerbe et vérité sociale. Quatre ans plus tard, Bertrand Blier retrouve son duo masculin Depardieu-Dewaere pour Préparez vos mouchoirs avant de diriger Depardieu en solo et son père dans Buffet froid (1979), César du meilleur scénario, puis Dewaere dans le subversif Beau-Pere (1981). \r\n\r\nScénariste de la totalité de ses films (mais également de Grosse Fatigue de Michel Blanc en 1994), le cinéaste signe avec Tenue de soirée l\'un des plus gros scandales du cinéma français des années 80 avec ses thèmes d\'homosexualité et de triolisme abordés sans détour. Il y retrouve une nouvelle fois Gérard Depardieu et Miou-Miou et glane le Prix d\'interprétation masculine du Festival de Cannes (pour Michel Blanc) et trois nominations aux Césars. Trois ans plus tard, le succès public et critique de Trop belle pour toi est encore plus imposant : Grand Prix du jury du Festival de Cannes et cinq Césars dont ceux du meilleur film, meilleur réalisateur et de la meilleure actrice (pour Carole Bouquet). \r\n\r\nLes années 1990 seront marquées par un raz-de-marée de récompenses, largement dû à sa collaboration avec Anouk Grinberg, nouvelle venue dans la galerie des comédiens de Blier. On citera Merci la vie (un César et 6 nominations) et Un, deux, trois, soleil en 1993 (deux César et surtout la Coupe Volpi du Meilleur Acteur du Festival de Venise pour Marcello Mastroianni) ainsi que Mon homme (1996), Prix de la meilleure actrice pour Anouk Grinberg au Festival de Berlin. \r\n\r\nEn 2000, le cinéaste réunit une trentaine de grands noms du cinéma français pour Les Acteurs, un hommage au métier du jeu teinté de dérision. Si le film est plutôt bien accueilli, Les Côtelettes, avec Philippe Noiret et Michel Bouquet en vieux épicuriens dissertant sur le sens de la vie et les plaisirs de la chair divise le public cannois, et reçoit un accueil national mitigé du public et de la critique. Blier revient en 2005 avec Combien tu m\'aimes ?, l\'histoire d\'un amour monnayé entre la péripatéticienne Monica Bellucci et son client Bernard Campan. Dix ans après Les Acteurs, il dirige à nouveau Albert Dupontel, devenu l\'incarnation du cancer de Jean Dujardin, dans la comédie dramatique Le Bruit des glaçons.', 'réalisateurs/bertrand-blier.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
+  `pseudo` varchar(100) NOT NULL,
+  `mdp` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `user`
+--
+
+INSERT INTO `user` (`id_user`, `pseudo`, `mdp`) VALUES
+(1, 'songoku', 'dbz');
+
 --
 -- Index pour les tables exportées
 --
@@ -168,6 +188,12 @@ ALTER TABLE `realisateur`
   ADD PRIMARY KEY (`ID_realisateur`);
 
 --
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -180,7 +206,7 @@ ALTER TABLE `acteur`
 -- AUTO_INCREMENT pour la table `films`
 --
 ALTER TABLE `films`
-  MODIFY `ID_film` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID_film` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `genre`
 --
@@ -191,6 +217,11 @@ ALTER TABLE `genre`
 --
 ALTER TABLE `realisateur`
   MODIFY `ID_realisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Contraintes pour les tables exportées
 --
